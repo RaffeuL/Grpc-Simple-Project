@@ -1,0 +1,2 @@
+obj\Debug\net6.0\Protos/Costumer.cs \
+obj\Debug\net6.0\Protos/CostumerGrpc.cs: Protos/Costumer.proto

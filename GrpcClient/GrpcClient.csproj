@@ -8,8 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Protos\costumers.proto" />
+    <None Remove="appsettings.Development.json" />
+    <None Remove="Protos\Customer.proto" />
     <None Remove="Protos\greet.proto" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.Development.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -22,8 +31,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Protobuf Include="Protos\costumers.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\Customer.proto">
+      <GrpcServices>Client</GrpcServices>
+    </Protobuf>
     <Protobuf Include="Protos\greet.proto" GrpcServices="Client" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Adapters\Grpc\" />
+    <Folder Include="Domain\" />
   </ItemGroup>
 
 </Project>

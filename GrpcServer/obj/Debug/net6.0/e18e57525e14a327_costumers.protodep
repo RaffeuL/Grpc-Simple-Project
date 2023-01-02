@@ -1,0 +1,2 @@
+obj\Debug\net6.0\Adapters\Grpc\ConstumersData\Proto/Costumers.cs \
+obj\Debug\net6.0\Adapters\Grpc\ConstumersData\Proto/CostumersGrpc.cs: Adapters/Grpc/ConstumersData/Proto/costumers.proto

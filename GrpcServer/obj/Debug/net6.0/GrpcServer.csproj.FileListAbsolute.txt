@@ -32,3 +32,4 @@ C:\Users\Rafael-W3\source\repos\GrpcDemo\GrpcServer\obj\Debug\net6.0\refint\Grpc
 C:\Users\Rafael-W3\source\repos\GrpcDemo\GrpcServer\obj\Debug\net6.0\GrpcServer.pdb
 C:\Users\Rafael-W3\source\repos\GrpcDemo\GrpcServer\obj\Debug\net6.0\GrpcServer.genruntimeconfig.cache
 C:\Users\Rafael-W3\source\repos\GrpcDemo\GrpcServer\obj\Debug\net6.0\ref\GrpcServer.dll
+C:\Users\Rafael-W3\source\repos\GrpcDemo\GrpcServer\bin\Debug\net6.0\appsettings.Fabrica.json
