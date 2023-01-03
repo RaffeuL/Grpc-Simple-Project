@@ -1,8 +1,10 @@
-﻿using Grpc.Net.Client;
-using GrpcClientAPI.Domain.SharedKernel.BaseUseCase;
+﻿using GrpcClientAPI.Adapters.Grpc.Clients;
+using GrpcClientAPI.Adapters.Grpc.Models;
+using GrpcClientAPI.Domain.SharedKernel.Base;
+using GrpcClientAPI.Domain.SharedKernel.InternalPorts;
 using GrpcServer;
 
-namespace GrpcClientAPI.Domain.UseCases.GetCostumerInfo
+namespace GrpcClientAPI.Domain.UseCases.GetCustomerInfo
 {
     public interface IUseCaseGetCustomerInfo
     {
@@ -11,19 +13,19 @@ namespace GrpcClientAPI.Domain.UseCases.GetCostumerInfo
     }
     public class UseCaseGetCustomerInfo : BaseUseCase, IUseCaseGetCustomerInfo
     {
-        private GrpcChannel _channel { get; set; }
-        private Customer.CustomerClient _customerClient { get; set; }
+        private readonly GrpcClientPort _service;
 
         public UseCaseGetCustomerInfo(IServiceProvider serviceProvider) : base(serviceProvider) 
         {
-            _channel = GrpcChannel.ForAddress("https://localhost:7154");
-            _customerClient = new Customer.CustomerClient(_channel);
+            _service = serviceProvider.GetRequiredService<GrpcClientPort>();
+            
         }
 
         public async Task<BaseResponse> USGetCostumerInfo(HttpRequest httpRequest, BaseRequest request)
         {
-            var customer = await _customerClient.GetCustomerInfoAsync(request);
-            return customer;
+            var response = await _service.GetCustomerInfo(request);
+
+            return response;
         }
 
     }

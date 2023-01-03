@@ -1,4 +1,4 @@
-﻿using GrpcClientAPI.Domain.UseCases.GetCostumerInfo;
+﻿using GrpcClientAPI.Domain.UseCases.GetCustomerInfo;
 
 namespace GrpcClientAPI.Extensions
 {

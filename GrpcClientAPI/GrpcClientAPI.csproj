@@ -21,11 +21,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Adapters\Grpc\ServiceProtos\" />
+    <Protobuf Include="Adapters\Grpc\Protos\Customer.proto" GrpcServices="Client" />
   </ItemGroup>
 
   <ItemGroup>
-    <Protobuf Include="Adapters\Grpc\Protos\Customer.proto" GrpcServices="Client" />
+    <Folder Include="Domain\SharedKernel\Enums\" />
+    <Folder Include="Domain\SharedKernel\Exceptions\" />
+    <Folder Include="Domain\SharedKernel\Models\" />
+    <Folder Include="Domain\SharedKernel\Utils\" />
+    <Folder Include="Domain\SharedKernel\Services\" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-﻿namespace GrpcClientAPI.Domain.UseCases.GetCostumerInfo
+﻿namespace GrpcClientAPI.Domain.UseCases.GetCustomerInfo
 {
     public  class Transaction 
     { 
